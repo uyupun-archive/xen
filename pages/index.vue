@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <div>
+  <div class="mt-4">
+    <h1 class="h1">Xen</h1>
+    <div class="iconWrapper">
       <img src="~/static/icon.png" class="mb-4 icon" />
     </div>
     <router-link to="/start">
@@ -10,7 +11,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+
+};
 </script>
 
 <style lang="scss" scoped>

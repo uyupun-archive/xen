@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-4">
     <p>座禅お疲れ様でした。</p>
     <div>
       <router-link to="/">

@@ -13,11 +13,8 @@
   overflow: hidden
 }
 .btn {
-  width: 250px;
+  width: 80%;
+  max-width: 250px;
   padding: 10px 0;
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 </style>
