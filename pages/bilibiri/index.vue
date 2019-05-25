@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>トップ</h3>
+    <h3>ビリビリ</h3>
   </div>
 </template>
 
