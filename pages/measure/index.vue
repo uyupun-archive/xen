@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>{{min + ':' + sec }}</div>
+    <div>{{ min + ':' + sec }}</div>
     <router-link to="/">
       <button type="button" class="btn btn-danger mt-3">やめる</button>
     </router-link>
@@ -10,33 +10,30 @@
 export default {
   data () {
     return {
+      timer: null,
       min: 0,
       sec: 30,
-      //time: 30
     }
   },
   created() {
     this.countDown();
   },
+  beforeDestroy() {
+    this.clearTimer();
+  },
   methods: {
-    countDown(){
-      setInterval(() => {
-        if(this.sec + this.min != 0){
-          if(this.sec == 0){
-            this.min--;
-            this.sec = 60;
-          }
-          this.sec--;
-          //this.time--;
+    countDown() {
+      this.timer = setInterval(() => {
+        this.sec -= 1;
+        if (this.sec <= 0) {
+          this.$router.push('/shock');
+          this.sec = 30;
         }
       }, 1000)
-      //console.log(this.$store.getters.time)
+    },
+    clearTimer() {
+      clearInterval(this.timer);
     }
   }
 };
 </script>
-
-<style lang="scss" scoped>
-
-</style>
-
