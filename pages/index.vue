@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h3>トップ</h3>
+    <img src=""/>
+    <router-link to="/description">
+      <button type="button" class ="btn btn-primary">座禅する</button>
+    </router-link>
   </div>
 </template>
 

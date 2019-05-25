@@ -6,5 +6,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+.btn {
+  width: 250px;
+  padding: 10px,0;
+}
 </style>
