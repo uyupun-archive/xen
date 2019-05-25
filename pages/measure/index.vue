@@ -26,7 +26,7 @@ export default {
       this.timer = setInterval(() => {
         this.sec -= 1;
         if (this.sec <= 0) {
-          this.$router.push('/shock');
+          this.$router.push('/complete');
           this.sec = 30;
         }
       }, 1000)
