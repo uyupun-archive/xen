@@ -11,8 +11,6 @@ const routerBase =
     {};
 
 export default {
-  ...routerBase,
-
   mode: 'universal',
 
   /*
@@ -54,6 +52,7 @@ export default {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
   ],
 
   /*
@@ -65,5 +64,11 @@ export default {
     */
     extend(config, ctx) {
     }
-  }
+  },
+
+  ...routerBase,
+
+  axios: {
+    baseURL: '',
+  },
 }
