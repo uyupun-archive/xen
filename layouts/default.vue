@@ -9,6 +9,6 @@
 <style lang="scss">
 .btn {
   width: 250px;
-  padding: 10px,0;
+  padding: 10px 0;
 }
 </style>
