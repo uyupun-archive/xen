@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h3>ビリビリ</h3>
-    <div>{{findMessage}}</div>
+    <h3>クリア</h3>
     <router-link to="/result">
       <button type="button" class="btn btn-primary mt-3">次へ</button>
     </router-link>
@@ -9,15 +8,7 @@
 </template>
 
 <script>
-import measure from '../measure'
-export default {
-  data: {
-    message: ['良い','普通','悪い'],
-  },
-  methods: {
-
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
