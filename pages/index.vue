@@ -1,7 +1,7 @@
 <template>
   <div>
     <img src=""/>
-    <router-link to="/description">
+    <router-link to="/start">
       <button type="button" class ="btn btn-primary">座禅する</button>
     </router-link>
   </div>
