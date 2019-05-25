@@ -1,7 +1,7 @@
 <template>
   <div class="mt-4">
     <img src="~/static/zen.png" class="mb-4 icon" />
-    <p class="text-left mb-4">
+    <p class="mb-4">
       座禅は「開始」ボタンを押して10秒後に開始されます。<br />
       それまでにあなたのデバイスを頭の上に乗せてバランスを取ってください。<br />
       バランスを崩したり、デバイスを落としたりすると手につけたデバイスに電流が流れるので気をつけてください。
