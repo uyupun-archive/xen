@@ -10,8 +10,9 @@
 export default {
   data () {
     return {
-      min: 2,
-      sec: 0,
+      min: 0,
+      sec: 30,
+      //time: 30
     }
   },
   created() {
@@ -26,10 +27,10 @@ export default {
             this.sec = 60;
           }
           this.sec--;
-        }else{
-          return true;
+          //this.time--;
         }
       }, 1000)
+      //console.log(this.$store.getters.time)
     }
   }
 };
