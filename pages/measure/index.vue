@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <div>{{ min + ':' + sec }}</div>
+  <div class="mt-4">
+    <h1 class="h1 measure">{{ min + ':' + sec }}</h1>
     <router-link to="/">
-      <button type="button" class="btn btn-danger mt-3">やめる</button>
+      <button type="button" class="btn btn-danger mt-3">座禅をやめる</button>
     </router-link>
   </div>
 </template>
+
 <script>
 export default {
   data () {
@@ -94,3 +95,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.measure {
+  font-size: 120px;
+}
+</style>

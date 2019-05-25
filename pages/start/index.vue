@@ -1,17 +1,27 @@
 <template>
-  <div class="container">
-    <!-- とりあえず適当にassetsに置く前提で話を進めておく -->
-    <img src=""/>
-    <h3 class="dummy">説明文ほげふが禅やるぞZenZen日本文化PWA最高大体これ何文字くらいなのかわからないから埋める</h3>
-    <router-link to ="/countDown">
-      <button type="button" class="btn btn-primary">開　始</button>
-    </router-link>
+  <div class="mt-4">
+    <img src="~/static/zen.png" class="mb-4 icon" />
+    <p class="mb-4">
+      座禅は「開始」ボタンを押して10秒後に開始されます。<br />
+      それまでにあなたのデバイスを頭の上に乗せてバランスを取ってください。<br />
+      バランスを崩したり、デバイスを落としたりすると手につけたデバイスに電流が流れるので気をつけてください。
+    </p>
+    <div class="mb-2">
+      <router-link to ="/countDown">
+        <button type="button" class="btn btn-primary">開始</button>
+      </router-link>
+    </div>
+    <div>
+      <router-link to ="/">
+        <button type="button" class="btn btn-danger">戻る</button>
+      </router-link>
+    </div>
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style lang="scss" scoped>
+.icon {
+  width: 80%;
+  max-width: 200px;
+}
 </style>

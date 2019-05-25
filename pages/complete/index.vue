@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="mt-4">
     <p>座禅お疲れ様でした。</p>
     <div>
       <router-link to="/">
@@ -8,9 +8,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>

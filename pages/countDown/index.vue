@@ -1,9 +1,8 @@
 <template>
-  <div class="container">
-    <h3>ダミー</h3>
-    <div class="text-center">{{ count }}</div>
+  <div>
+    <h1 class="h1 count">{{ count }}</h1>
     <router-link to="/">
-      <button type="button" class="btn btn-danger mt-3">やめる</button>
+      <button type="button" class="btn btn-danger mt-3">座禅をやめる</button>
     </router-link>
   </div>
 </template>
@@ -38,3 +37,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.count {
+  font-size: 200px;
+}
+</style>
