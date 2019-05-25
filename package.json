@@ -1,5 +1,5 @@
 {
-  "name": "xen-app",
+  "name": "xen",
   "version": "1.0.0",
   "description": "My epic Nuxt.js project",
   "author": "takashi",
@@ -8,7 +8,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build && rm -rf docs && mv dist docs",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate && rm -rf docs && mv dist docs"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.16",
