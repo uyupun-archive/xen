@@ -22,10 +22,10 @@ export default {
   },
   mounted() {
     window.addEventListener("deviceorientation", dat => {
-      this.alpha = Math.round(dat.alpha);
-      this.beta = Math.round(dat.beta);
-      this.gamma = Math.round(dat.gamma);
-      this.compareGyro();
+      let alpha = Math.round(dat.alpha);
+      let beta = Math.round(dat.beta);
+      let gamma = Math.round(dat.gamma);
+      this.compareGyro(alpha, beta, gamma);
     });
     this.countDown();
   },
@@ -33,57 +33,54 @@ export default {
     this.clearTimer();
   },
   methods: {
-    compareGyro() {
+    compareGyro(alpha, beta, gamma) {
       this.count += 1;
-      let alpha = 0;
-      let beta = 0;
-      let gamma = 0;
       if (this.count === 1) {
-        alpha = this.alpha;
-        beta = this.beta;
-        gamma = this.gamma;
-        console.log(alpha, beta, gamma);
+        this.alpha = alpha;
+        this.beta = beta;
+        this.gamma = gamma;
+        console.log(this.alpha, this.beta, this.gamma);
       }
 
-      if (alpha > 10 && alpha < 350) {
-        if (alpha - 10 > this.alpha || alpha + 10 < this.alpha) this.$router.push('/shock');
+      if (this.alpha > 10 && this.alpha < 350) {
+        if (this.alpha - 10 > alpha || this.alpha + 10 < alpha) this.$router.push('/shock');
       }
-      else if (alpha <= 10) {
-        if (alpha + 10 < this.alpha) {
-          if (alpha + 350 > this.alpha) this.$router.push('/shock');
+      else if (this.alpha <= 10) {
+        if (this.alpha + 10 < alpha) {
+          if (this.alpha + 350 > alpha) this.$router.push('/shock');
         }
       }
       else {
-        if (alpha - 10 > this.alpha) {
-          if (alpha - 350 < this.alpha) this.$router.push('/shock');
+        if (this.alpha - 10 > alpha) {
+          if (this.alpha - 350 < alpha) this.$router.push('/shock');
         }
       }
 
-      if (beta > -170 && beta < 170) {
-        if (beta - 10 > this.beta || beta + 10 < this.beta) this.$router.push('/shock');
+      if (this.beta > -170 && this.beta < 170) {
+        if (this.beta - 10 > beta || this.beta + 10 < beta) this.$router.push('/shock');
       }
-      else if (beta >= 170 && beta <= 180) {
-        if (beta - 10 < this.alpha) {
-          if (-beta < this.alpha) this.$router.push('/shock');
+      else if (this.beta >= 170 && this.beta <= 180) {
+        if (this.beta - 10 < beta) {
+          if (-this.beta < beta) this.$router.push('/shock');
         }
       }
       else {
-        if (beta + 10 < this.alpha) {
-          if (-beta > this.alpha) this.$router.push('/shock');
+        if (this.beta + 10 < beta) {
+          if (-this.beta > beta) this.$router.push('/shock');
         }
       }
 
-      if (gamma > -80 && gamma < 80) {
-        if (gamma - 80 > this.gamma || gamma + 10 < this.gamma) this.$router.push('/shock');
+      if (this.gamma > -80 && this.gamma < 80) {
+        if (this.gamma - 80 > gamma || this.gamma + 10 < gamma) this.$router.push('/shock');
       }
-      else if (gamma <= 90 && gamma >= 80) {
-        if (gamma - 10 > this.alpha) {
-          if (-gamma < this.alpha) this.$router.push('/shock');
+      else if (this.gamma <= 90 && this.gamma >= 80) {
+        if (this.gamma - 10 > gamma) {
+          if (-this.gamma < gamma) this.$router.push('/shock');
         }
       }
       else {
-        if (gamma + 10 < this.alpha) {
-          if (-gamma < this.alpha) this.$router.push('/shock');
+        if (this.gamma + 10 < gamma) {
+          if (-this.gamma < gamma) this.$router.push('/shock');
         }
       }
     },
