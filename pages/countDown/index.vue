@@ -27,7 +27,6 @@ export default {
         this.count -= 1;
         if (this.count <= 0) {
           this.$router.push('/measure');
-          this.count = 10;
         }
       }, 1000);
     },
