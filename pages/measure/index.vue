@@ -21,17 +21,12 @@ export default {
     }
   },
   mounted() {
-    setInterval(() => {
-      window.addEventListener("deviceorientation", dat => {
-        // alpha値=z軸
-        this.alpha = Math.round(dat.alpha);
-        // beta値=x軸
-        this.beta = Math.round(dat.beta);
-        // gamma値=y軸
-        this.gamma = Math.round(dat.gamma);
-      });
+    window.addEventListener("deviceorientation", dat => {
+      this.alpha = Math.round(dat.alpha);
+      this.beta = Math.round(dat.beta);
+      this.gamma = Math.round(dat.gamma);
       this.compareGyro();
-    }, 500);
+    });
     this.countDown();
   },
   beforeDestroy() {
