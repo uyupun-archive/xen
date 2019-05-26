@@ -14,6 +14,8 @@
 export default {
   created() {
     // this.notifyShock();
+  },
+  mounted() {
     this.playBeep();
   },
   methods: {
