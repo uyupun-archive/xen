@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <h3>ビリビリ</h3>
-    <router-link to="/result">
-      <button type="button" class="btn btn-primary mt-3">次へ</button>
-    </router-link>
+  <div class="mt-4">
+    <h2 class="h2">座禅お疲れ様でした。</h2>
+    <p>まだまだ修行が足りないようです。</p>
+    <div>
+      <router-link to="/">
+        <button type="button" class="btn btn-danger">トップへ戻る</button>
+      </router-link>
+    </div>
   </div>
 </template>
 
