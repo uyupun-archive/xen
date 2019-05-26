@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     notifyShock() {
-      this.$axios.get('/')
+      // this.$axios.get('/')
     }
   }
 };
