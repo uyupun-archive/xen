@@ -3,9 +3,10 @@
     <h2 class="h2">座禅お疲れ様でした。</h2>
     <p>まだまだ修行が足りないようです。</p>
     <div>
-      <router-link to="/">
+      <!-- TODO: 力技なので直す -->
+      <a href="/">
         <button type="button" class="btn btn-danger">トップへ戻る</button>
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
