@@ -10,5 +10,15 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<script>
+export default {
+  created() {
+    this.notifyShock();
+  },
+  methods: {
+    notifyShock() {
+      this.$axios.get('/')
+    }
+  }
+};
+</script>
