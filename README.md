@@ -1,6 +1,6 @@
 # Xen
 
-[禅の心](https://tyokinuhata.github.io/xen/)を感じろ&#x1f4aa;
+[禅の心](https://uyupun-archive.github.io/xen/)を感じろ&#x1f4aa;
 
 ## Setup
 
